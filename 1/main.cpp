@@ -12,8 +12,17 @@ int main(){
         int number = 0, sum = 0;
 
         while((character = getc(inputFile)) != EOF){
-            printf("%c", character);
+            if(character == '\n'){
+                sum += number;
+                number = 0;
+            }
+            else if('0' <= character && character <= '9')
+                number = number * 10 + int(character) - 48;
         }
+
+        sum += number;
+
+        printf("The sum is: %d\n", sum);
     }
 
     system("pause");

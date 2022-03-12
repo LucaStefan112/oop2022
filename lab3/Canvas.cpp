@@ -20,7 +20,7 @@ Canvas::Canvas(int width, int height) {
 
 	this->canvas = new char*[height];
 
-	for (int i = 0; i < width; i++)
+	for (int i = 0; i < height; i++)
 		this->canvas[i] = new char[width];
 
 	for (int i = 0; i < this->height; i++)

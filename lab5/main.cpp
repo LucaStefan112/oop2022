@@ -1,15 +1,19 @@
 #include <stdio.h>
-#include "Number.h"
+#include "Number.hpp"
 
 int main(){
 
-    Number n1("10110010", 2);
+    Number n1("111", 2);
     Number n2("734", 8);
     Number n3("FF", 16);
 
+    n1.Print();
+    n1.SwitchBase(10);
+    n1.Print();
+    
     printf("n1 has %d digits and it is written in base %d\n", n1.GetDigitsCount(), n1.GetBase());
 
-    for (int tr = 0; tr < n1.GetDigitsCount(); tr++){
+    for (int tr = 0; tr < n1.GetDigitsCount(); tr++)
         printf("n1[%d]=%c\n", tr, n1[tr]);
 
     n1.Print();
@@ -25,7 +29,7 @@ int main(){
     Number n4 = 12345; // n4 will be in base 10
 
     n1 = 255; // n1 will be 11111111 (value 255 from base 10 in base 2)
-    
+
     n4 += n1;
     n4.Print();
     n4 = "13579"; // n4 mentains its base (10) and will be 13579

@@ -7,3 +7,4 @@
 *.vcxproj.user
 *.dsYM/
 Xcode/
+.DS_Store
